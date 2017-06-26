@@ -25,11 +25,11 @@ def test_string_gets_styled_bright_green():
 
 
 def test_string_gets_styled_yellow():
-    assert Escape('hello').green() == u'\x1b[33mhello\x1b[39m'
+    assert Escape('hello').yellow() == u'\x1b[33mhello\x1b[39m'
 
 
 def test_string_gets_styled_bright_yellow():
-    assert Escape('hello').bright_green() == u'\x1b[93mhello\x1b[39m'
+    assert Escape('hello').bright_yellow() == u'\x1b[93mhello\x1b[39m'
 
 
 def test_string_gets_styled_blue():
@@ -53,7 +53,7 @@ def test_string_gets_styled_cyan():
 
 
 def test_string_gets_styled_bright_cyan():
-    assert Escape('hello').bright_magenta() == u'\x1b[96mhello\x1b[39m'
+    assert Escape('hello').bright_cyan() == u'\x1b[96mhello\x1b[39m'
 
 
 def test_string_gets_styled_white():

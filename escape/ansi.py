@@ -36,7 +36,7 @@ class ColorMixin(object):
         self._string = self._template.format(start=33, end=39, text=self._string)
         return self
 
-    def yellow_bright(self):
+    def bright_yellow(self):
         self._string = self._template.format(start=93, end=39, text=self._string)
         return self
 
