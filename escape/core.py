@@ -24,4 +24,10 @@ class Escape(ColorMixin, object):
     def __repr__(self):
         return self.__str__()
 
+    def __add__(self, other):
+        return self._string + other
+
+    def __radd__(self, other):
+        return other + self._string
+
 

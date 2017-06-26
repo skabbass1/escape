@@ -61,7 +61,7 @@ def test_string_gets_styled_white():
 
 
 def test_string_gets_styled_bright_white():
-    assert Escape('hello').bright_white * () == u'\x1b[97mhello\x1b[39m'
+    assert Escape('hello').bright_white() == u'\x1b[97mhello\x1b[39m'
 
 
 def test_string_gets_styled_gray():
@@ -70,3 +70,8 @@ def test_string_gets_styled_gray():
 
 def test_multiple_styles_get_applied():
     assert Escape('Hello World').red().blue() == u'\x1b[34m\x1b[31mHello World\x1b[39m\x1b[39m'
+
+
+def test_conatenate_with_other_strings():
+    assert Escape('hello') + ' world' == 'hello world'
+    assert 'world,' + Escape('Hi!').green() == u'world,\x1b[32mHi!\x1b[39m'
