@@ -2,15 +2,17 @@
 This module implements the core terminal styling functionality
 """
 
-from .ansi import (
-    ColorMixin
+from .ansi_styles import (
+    ColorMixin,
+    BackGroundColorMixin,
 )
 
 
-class Escape(ColorMixin, object):
+class Escape(ColorMixin, BackGroundColorMixin, object):
     """
 
     """
+
     def __init__(self, s):
         self._original = s
         self._string = s
@@ -29,5 +31,3 @@ class Escape(ColorMixin, object):
 
     def __radd__(self, other):
         return other + self._string
-
-

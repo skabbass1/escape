@@ -75,3 +75,67 @@ def test_multiple_styles_get_applied():
 def test_conatenate_with_other_strings():
     assert Escape('hello') + ' world' == 'hello world'
     assert 'world,' + Escape('Hi!').green() == u'world,\x1b[32mHi!\x1b[39m'
+
+
+def test_string_gets_styled_black_background():
+    assert Escape('hello').black_background() == u'\x1b[40mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_black_background():
+    assert Escape('hello').bright_black_background() == u'\x1b[100mhello\x1b[49m'
+
+
+def test_string_gets_styled_red_background():
+    assert Escape('hello').red_background() == u'\x1b[41mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_red_background():
+    assert Escape('hello').bright_red_background() == u'\x1b[101mhello\x1b[49m'
+
+
+def test_string_gets_styled_green_background():
+    assert Escape('hello').green_background() == u'\x1b[42mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_green_background():
+    assert Escape('hello').bright_green_background() == u'\x1b[102mhello\x1b[49m'
+
+
+def test_string_gets_styled_yellow_background():
+    assert Escape('hello').yellow_background() == u'\x1b[43mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_yellow_background():
+    assert Escape('hello').bright_yellow_background() == u'\x1b[103mhello\x1b[49m'
+
+
+def test_string_gets_styled_blue_background():
+    assert Escape('hello').blue_background() == u'\x1b[44mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_blue_background():
+    assert Escape('hello').bright_blue_background() == u'\x1b[104mhello\x1b[49m'
+
+
+def test_string_gets_styled_magenta_background():
+    assert Escape('hello').magenta_background() == u'\x1b[45mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_magenta_background():
+    assert Escape('hello').bright_magenta_background() == u'\x1b[105mhello\x1b[49m'
+
+
+def test_string_gets_styled_cyan_background():
+    assert Escape('hello').cyan_background() == u'\x1b[46mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_cyan_background():
+    assert Escape('hello').bright_cyan_background() == u'\x1b[106mhello\x1b[49m'
+
+
+def test_string_gets_styled_white_background():
+    assert Escape('hello').white_background() == u'\x1b[47mhello\x1b[49m'
+
+
+def test_string_gets_styled_bright_white_background():
+    assert Escape('hello').bright_white_background() == u'\x1b[107mhello\x1b[49m'
