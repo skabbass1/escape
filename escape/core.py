@@ -5,10 +5,11 @@ This module implements the core terminal styling functionality
 from .ansi_styles import (
     ColorMixin,
     BackGroundColorMixin,
+    ModifiersMixin
 )
 
 
-class Escape(ColorMixin, BackGroundColorMixin, object):
+class Escape(ColorMixin, BackGroundColorMixin, ModifiersMixin, object):
     """
 
     """

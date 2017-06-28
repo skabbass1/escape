@@ -147,3 +147,39 @@ class BackGroundColorMixin(object):
     def bright_white_background(self):
         self._string = self._background_color_template.format(start=107, end=49, text=self._string)
         return self
+
+
+class ModifiersMixin(object):
+    """
+    A simple mixin class which wraps  input text between
+    ansi text modifier  escape codes
+    """
+    _modifier_template = u'\u001b[{start}m{text}\u001b[{end}m'
+
+    def reset(self):
+        self._string = self._modifier_template.format(start=0, end=0, text=self._string)
+        return self
+
+    def bold(self):
+        self._string = self._modifier_template.format(start=1, end=22, text=self._string)
+        return self
+
+    def dim(self):
+        self._string = self._modifier_template.format(start=2, end=22, text=self._string)
+        return self
+
+    def italic(self):
+        self._string = self._modifier_template.format(start=3, end=23, text=self._string)
+        return self
+
+    def inverse(self):
+        self._string = self._modifier_template.format(start=7, end=27, text=self._string)
+        return self
+
+    def hidden(self):
+        self._string = self._modifier_template.format(start=8, end=28, text=self._string)
+        return self
+
+    def strikethrough(self):
+        self._string = self._modifier_template.format(start=9, end=29, text=self._string)
+        return self

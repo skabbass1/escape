@@ -68,15 +68,6 @@ def test_string_gets_styled_gray():
     assert Escape('hello').gray() == u'\x1b[90mhello\x1b[39m'
 
 
-def test_multiple_styles_get_applied():
-    assert Escape('Hello World').red().blue() == u'\x1b[34m\x1b[31mHello World\x1b[39m\x1b[39m'
-
-
-def test_conatenate_with_other_strings():
-    assert Escape('hello') + ' world' == 'hello world'
-    assert 'world,' + Escape('Hi!').green() == u'world,\x1b[32mHi!\x1b[39m'
-
-
 def test_string_gets_styled_black_background():
     assert Escape('hello').black_background() == u'\x1b[40mhello\x1b[49m'
 
@@ -139,3 +130,40 @@ def test_string_gets_styled_white_background():
 
 def test_string_gets_styled_bright_white_background():
     assert Escape('hello').bright_white_background() == u'\x1b[107mhello\x1b[49m'
+
+
+def test_string_gets_reset():
+    assert Escape('hello').reset() == u'\x1b[0mhello\x1b[0m'
+
+
+def test_string_gets_styled_bold():
+    assert Escape('hello').bold() == u'\x1b[1mhello\x1b[22m'
+
+
+def test_string_gets_styled_dim():
+    assert Escape('hello').dim() == u'\x1b[2mhello\x1b[22m'
+
+
+def test_string_gets_styled_italic():
+    assert Escape('hello').italic() == u'\x1b[3mhello\x1b[23m'
+
+
+def test_string_gets_styled_inverse():
+    assert Escape('hello').inverse() == u'\x1b[7mhello\x1b[27m'
+
+
+def test_string_gets_hidden():
+    assert Escape('hello').hidden() == u'\x1b[8mhello\x1b[28m'
+
+
+def test_string_gets_striked_through():
+    assert Escape('hello').strikethrough() == u'\x1b[9mhello\x1b[29m'
+
+
+def test_multiple_styles_get_applied():
+    assert Escape('Hello World').red().blue() == u'\x1b[34m\x1b[31mHello World\x1b[39m\x1b[39m'
+
+
+def test_conatenate_with_other_strings():
+    assert Escape('hello') + ' world' == 'hello world'
+    assert 'world,' + Escape('Hi!').green() == u'world,\x1b[32mHi!\x1b[39m'
