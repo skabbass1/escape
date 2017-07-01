@@ -82,7 +82,7 @@ class BackGroundColorMixin(object):
     ansi background color escape codes
     """
 
-    _background_color_template = u'\u001b[{start}m{text}\u001b[{end}m'
+    _background_color_template = u'\x1b[{start}m{text}\x1b[{end}m'
 
     def black_background(self):
         self._string = self._background_color_template.format(start=40, end=49, text=self._string)
@@ -154,7 +154,7 @@ class ModifiersMixin(object):
     A simple mixin class which wraps  input text between
     ansi text modifier  escape codes
     """
-    _modifier_template = u'\u001b[{start}m{text}\u001b[{end}m'
+    _modifier_template = u'\x1b[{start}m{text}\x1b[{end}m'
 
     def reset(self):
         self._string = self._modifier_template.format(start=0, end=0, text=self._string)
@@ -182,4 +182,8 @@ class ModifiersMixin(object):
 
     def strikethrough(self):
         self._string = self._modifier_template.format(start=9, end=29, text=self._string)
+        return self
+
+    def underline(self):
+        self._string = self._modifier_template.format(start=4, end=24, text=self._string)
         return self
