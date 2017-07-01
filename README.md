@@ -3,6 +3,7 @@ Escape is a very simple  unix terminal styling library largely inspired by the e
 library. Curently escape does not support all the functionality offered by **chalk** (it hopefully will in due time). Escape has been tested to work with python 2.7 and python 3.6.
 
 # Install
+Pip install coming soon
 
 # Usage
 ```python
