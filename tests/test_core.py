@@ -159,8 +159,10 @@ def test_string_gets_hidden():
 def test_string_gets_striked_through():
     assert Escape('hello').strikethrough() == u'\x1b[9mhello\x1b[29m'
 
+
 def test_string_gets_underlined():
     assert Escape('hello').underline() == u'\x1b[4mhello\x1b[24m'
+
 
 def test_multiple_styles_get_applied():
     assert Escape('Hello World').red().blue() == u'\x1b[34m\x1b[31mHello World\x1b[39m\x1b[39m'
@@ -169,3 +171,9 @@ def test_multiple_styles_get_applied():
 def test_conatenate_with_other_strings():
     assert Escape('hello') + ' world' == 'hello world'
     assert 'world,' + Escape('Hi!').green() == u'world,\x1b[32mHi!\x1b[39m'
+
+
+def test_styles_get_nested():
+    assert (Escape('Hello ' + Escape('World')
+                   .bright_green_background())
+            .bright_red()) == '\x1b[91mHello \x1b[102mWorld\x1b[49m\x1b[39m'
