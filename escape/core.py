@@ -14,9 +14,9 @@ class Escape(ColorMixin, BackGroundColorMixin, ModifiersMixin, object):
 
     """
 
-    def __init__(self, s):
-        self._original = s
-        self._string = s
+    def __init__(self, *args):
+        self._original = ''.join([str(arg) for arg in args])
+        self._string = self._original
 
     def __eq__(self, other):
         return other == self._string
