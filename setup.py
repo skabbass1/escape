@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='escape',
@@ -9,6 +9,7 @@ setup(
     author_email='syed.k.abbas1988@gmail.com',
     url='https://github.com/skabbass1/escape',  # use the URL to the github repo
     download_url='https://github.com/skabbass1/escape/archive/1.0.tar.gz',
+    license='MIT',
     keywords=[
         'terminal-colors',
         'ansi',
@@ -19,6 +20,14 @@ setup(
         'color',
         'cli',
 
-    ],  # arbitrary keywords
-    classifiers=[],
+    ],
+    classifiers=(
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.6',
+    ),
+
 )
+
