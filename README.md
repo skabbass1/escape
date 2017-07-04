@@ -57,8 +57,9 @@ Escape('Hello ' +  Escape('World').bright_green_background()).bright_red()
  * bright_magenta
  * bright_cyan
  * bright_white
- 
- ### Background Colors
+
+
+### Background Colors
  * black_background
  * red_background
  * green_background
