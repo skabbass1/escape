@@ -154,10 +154,6 @@ class ModifiersMixin(object):
     ansi text modifier  escape codes
     """
 
-    def reset(self):
-        self._styled_string = _STYLE_TEMPLATE.format(start=0, end=0, text=self._styled_string)
-        return self
-
     def bold(self):
         self._styled_string = _STYLE_TEMPLATE.format(start=1, end=22, text=self._styled_string)
         return self
