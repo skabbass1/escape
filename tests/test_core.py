@@ -135,10 +135,6 @@ def test_string_gets_styled_bright_white_background():
     assert Escape('hello').bright_white_background() == '\x1b[107mhello\x1b[49m'
 
 
-def test_string_gets_reset():
-    assert Escape('hello').reset() == '\x1b[0mhello\x1b[0m'
-
-
 def test_string_gets_styled_bold():
     assert Escape('hello').bold() == '\x1b[1mhello\x1b[22m'
 
@@ -192,5 +188,3 @@ def test_multiply_creates_repeated_styled_string():
 
 def test_using_unicode_codepoints_does_not_raise():
     Escape(u'\u0150 ', Escape('Hello').bright_green_background()).bright_red()
-
-
