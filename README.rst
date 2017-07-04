@@ -73,13 +73,25 @@ Colors
 -  bright\_cyan
 -  bright\_white
 
-### Background Colors \* black\_background \* red\_background \*
-green\_background \* yellow\_background \* blue\_background \*
-magenta\_background \* cyan\_background \* white\_background \*
-bright\_black\_background \* bright\_red\_background \*
-bright\_green\_background \* bright\_yellow\_background \*
-bright\_blue\_background \* bright\_magenta\_background \*
-bright\_cyan\_background \* bright\_white\_background
+Background Colors
+~~~~~~~~~~~~~~~~~
+
+-  black\_background
+-  red\_background
+-  green\_background
+-  yellow\_background
+-  blue\_background
+-  magenta\_background
+-  cyan\_background
+-  white\_background
+-  bright\_black\_background
+-  bright\_red\_background
+-  bright\_green\_background
+-  bright\_yellow\_background
+-  bright\_blue\_background
+-  bright\_magenta\_background
+-  bright\_cyan\_background
+-  bright\_white\_background
 
 .. |Build Status| image:: https://travis-ci.org/skabbass1/escape.svg?branch=master
    :target: https://travis-ci.org/skabbass1/escape
