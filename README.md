@@ -2,7 +2,7 @@
 
 # escape
 Escape is a very simple  terminal styling library largely inspired by the excellent javascript [chalk](https://github.com/chalk/chalk)
-library. Curently escape does not support all the functionality offered by **chalk** (it hopefully will in due time). Escape has been tested to work with **python 2.7** and **python 3.6**. Escape **has not** been tested on Windows
+library. There are other terminal styling libraries such as [colorama](https://github.com/tartley/colorama) available but they do not offer a simple composable API like escape does. Escape is pure python, does not have any external dependencies and should work right out of the box. Escape has been tested to work with **python 2.7** and **python 3.6**. Escape **has not** been tested on Windows
 
 # Install
 pip install escape
