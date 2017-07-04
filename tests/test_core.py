@@ -3,6 +3,7 @@
 """
 Unittests for the core module
 """
+
 from escape.core import Escape
 
 
@@ -187,3 +188,9 @@ def test_length_returns_length_of_unstyled_string():
 
 def test_multiply_creates_repeated_styled_string():
     assert Escape('red').red() * 3 == '\x1b[31mred\x1b[39m\x1b[31mred\x1b[39m\x1b[31mred\x1b[39m'
+
+
+def test_using_unicode_codepoints_does_not_raise():
+    Escape(u'\u0150 ', Escape('Hello').bright_green_background()).bright_red()
+
+
