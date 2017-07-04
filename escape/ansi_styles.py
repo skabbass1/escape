@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
 """
 Ansi Color, BackGround Color and Modifier Mixins
 """
 
-_STYLE_TEMPLATE = u'\x1b[{start}m{text}\x1b[{end}m'
+_STYLE_TEMPLATE = '\x1b[{start}m{text}\x1b[{end}m'
 
 
 class ColorMixin(object):
