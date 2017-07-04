@@ -177,3 +177,11 @@ def test_styles_get_nested():
     assert (Escape('Hello ' + Escape('World')
                    .bright_green_background())
             .bright_red()) == '\x1b[91mHello \x1b[102mWorld\x1b[49m\x1b[39m'
+
+
+def test_length_returns_length_of_unstyled_string():
+    assert len(Escape('Hello').red()) == len('Hello')
+
+
+def test_multiply_creates_repeated_styled_string():
+    assert Escape('red').red() * 3 == u'\x1b[31mred\x1b[39m\x1b[31mred\x1b[39m\x1b[31mred\x1b[39m'
