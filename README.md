@@ -36,7 +36,6 @@ Escape('Hello ' +  Escape('World').bright_green_background()).bright_red()
 * hidden
 * inverse
 * italic
-* reset
 * strikethrough
 * underline
 
