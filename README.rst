@@ -38,6 +38,19 @@ Usage
 
     Escape('Hello ' +  Escape('World').bright_green_background()).bright_red()
 
+Preview how styling looks on your terminal
+==========================================
+
+.. code:: python
+
+    from escape import palette
+    palette()
+
+.. figure:: media/palette.png
+   :alt: alt tag
+
+   alt tag
+
 Styles
 ======
 
@@ -49,7 +62,6 @@ Modifiers
 -  hidden
 -  inverse
 -  italic
--  reset
 -  strikethrough
 -  underline
 
