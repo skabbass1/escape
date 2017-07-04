@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/skabbass1/escape.svg?branch=master)](https://travis-ci.org/skabbass1/escape)
+
 # escape
 Escape is a very simple  terminal styling library largely inspired by the excellent javascript [chalk](https://github.com/chalk/chalk)
 library. Curently escape does not support all the functionality offered by **chalk** (it hopefully will in due time). Escape has been tested to work with **python 2.7** and **python 3.6**. Escape **has not** been tested on Windows
