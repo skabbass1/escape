@@ -4,6 +4,7 @@ This module provides a simple class to manage styling strings in the terminal
 """
 
 import sys
+import itertools
 
 from .ansi_styles import (
     ColorMixin,
@@ -55,3 +56,17 @@ class Escape(ColorMixin, BackGroundColorMixin, ModifiersMixin, object):
 
     def __mul__(self, other):
         return self._styled_string * other
+
+
+def palette():
+    colors = [a for a in dir(ColorMixin) if not a.startswith('_')]
+    bg_colors = [a for a in dir(BackGroundColorMixin) if not a.startswith('_')]
+    modifiers = [a for a in dir(ModifiersMixin) if not a.startswith('_')]
+    max_attribute_name_len = len(max(colors + bg_colors + modifiers, key=len))
+    string = 'Hello World'
+    table_width = max_attribute_name_len + len(string) + 3
+    for c in itertools.chain(colors, bg_colors, modifiers):
+        print('-' * table_width)
+        print(c.ljust(max_attribute_name_len) + '|', getattr(Escape(string), c)() + '|')
+    print('-' * table_width)
+
