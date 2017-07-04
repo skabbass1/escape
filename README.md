@@ -28,6 +28,13 @@ Escape('Hello ', Escape('World').bright_green_background()).bright_red()
 Escape('Hello ' +  Escape('World').bright_green_background()).bright_red()
 
 ```
+# Preview how styling looks on your terminal
+```python
+from escape import palette
+palette()
+```
+![alt tag](media/palette.png)
+
 # Styles
 
 ### Modifiers
